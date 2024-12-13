@@ -1,7 +1,13 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
 table {
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
   font-family: Arial, sans-serif;
+  margin-top: 16px;
 
   th,
   td {
@@ -20,6 +26,11 @@ table {
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 2px solid #333;
+    border-top: 2px solid #333;
+  }
+
+  .sortable {
+    cursor: pointer;
   }
 
   tr:nth-child(even) {
@@ -27,7 +38,7 @@ table {
   }
 
   tr:hover {
-    background-color: #ddd;
+    background-color: #b2beb5;
     cursor: pointer;
   }
 
