@@ -103,9 +103,16 @@ const TableContainer: React.FC = () => {
           ? SortingDirections.NONE
           : SortingDirections.ASC
       );
+    } else {
+      setSortKey(key);
+      setSortOrder(
+        key === SortingKeys.TITLE
+          ? SortingDirections.ASC
+          : SortingDirections.DESC
+      );
     }
 
-    setSortKey(key);
+    setCurrentPage(1);
   };
 
   const handlePageChanged = (page: number): void => {
